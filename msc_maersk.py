@@ -35,8 +35,9 @@ import feedparser
 
 # In[30]:
 
-
-response = requests.get("https://api.maerskline.com/track/MNBU0217324?operator=maeu")
+container_id = st.text_input("CONTAINER NUMBER")
+st.write(container_id)
+response = requests.get("https://api.maerskline.com/track/{}?operator=maeu".format(container_id))
 
 
 # In[31]:
