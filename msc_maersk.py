@@ -11,7 +11,6 @@
 
 
 import pandas as pd
-import pyexasol
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 import re
