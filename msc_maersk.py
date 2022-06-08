@@ -12,7 +12,7 @@ import feedparser
 
 
 st.header("ETA APP")
-shipping_company = st.radio(label = 'Select one of', options = ['MSC','MAERSK'])
+shipping_company = st.radio(label = 'Select you carrier', options = ['MSC','MAERSK'])
 
 
 container_id = st.text_input("CONTAINER NUMBER")
