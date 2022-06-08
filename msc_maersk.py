@@ -11,7 +11,7 @@ import requests
 import feedparser
 
 
-st.header("ETA APP")
+st.header("PMS ETA APP")
 shipping_company = st.radio(label = 'Select you carrier', options = ['MSC','MAERSK'])
 
 
@@ -49,10 +49,10 @@ if shipping_company == "MAERSK":
             dict_maersk['Expected time'].append("NA")
 
 
-        df = pd.DataFrame(dict_maersk)
-        st.write(df)
+    df = pd.DataFrame(dict_maersk)
+    st.write(df)
 
-        st.write("ETA in Montreal - if known:\n",json_content['containers'][0]['eta_final_delivery'][0:10])
+    st.write("ETA in Montreal - if known:\n",json_content['containers'][0]['eta_final_delivery'][0:10])
         
 
 elif shipping_company == "MSC":
